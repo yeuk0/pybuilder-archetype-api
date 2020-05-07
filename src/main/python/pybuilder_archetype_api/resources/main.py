@@ -4,7 +4,7 @@ from flask import Flask
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from config import constants as const
-from apis.api_extract_feeds import blueprint as api_text
+from api.api_extract_feeds import blueprint as api_text
 from utils.loggers import config_logging
 
 
