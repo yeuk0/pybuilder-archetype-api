@@ -30,11 +30,15 @@ license = "Apache License, Version 2.0"
 
 authors = [Author("Arturo GL", 'r2d2006@hotmail.com'), Author("Diego BM", 'diegobm92@gmail.com')]
 url = 'https://github.com/yeuk0/pybuilder-archetype-api'
-description = "External plugin for PyBuilder to generate a web service project structure"
-long_description = f"Visit {url} for more information"
-summary = "PyBuilder Python web service project structure Plugin"
+summary = "External plugin for PyBuilder to generate a web service project structure"
+description = open('README.md', encoding='utf8').read()
 
 default_task = ['clean', 'publish']
+
+
+@init
+def initialise(project):
+	project.set_property('distutils_readme_file_type', 'text/markdown')
 
 
 @init
