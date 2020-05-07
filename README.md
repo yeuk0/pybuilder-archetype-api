@@ -46,7 +46,7 @@ Configure the plugin within your `init` function:
 ```python
 @init
 def initialise(project):
-    project.set_property('project_base_path', Path(__file__).parent)
+    project.set_property('project_base_path', project_path)
 ```
 
 This will tell the plugin which is the project location in the filesystem. `project_base_path` property value should
